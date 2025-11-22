@@ -3,15 +3,15 @@ vim9script
 # DiceRollResult クラスの定義
 # 例: DiceRollResult.new([3, 5], 2) は 2 個のサイコロの出目が 3 と 5、修正値が 2 の結果を表す
 class DiceRollResult
-    var rolls: list<number>
-    var modifier: number
-    var total: number
+  var rolls: list<number>
+  var modifier: number
+  var total: number
 
-    def new(rolls: list<number>, modifier: number)
-        this.rolls = rolls
-        this.modifier = modifier
-        this.total = eval(join(rolls, ' + ')) + modifier
-    enddef
+  def new(rolls: list<number>, modifier: number)
+    this.rolls = rolls
+    this.modifier = modifier
+    this.total = eval(join(rolls, ' + ')) + modifier
+  enddef
 endclass
 
 # サイコロを振る関数
