@@ -10,7 +10,7 @@
 使用例:
 
 ```vim
-let result diceroll#Roll("2d6+3")
+let result = diceroll#Roll("2d6+3")
 => object of DiceRollResult {rolls: [3, 3], modifier: 3, total: 9}
 ```
 ## License:
