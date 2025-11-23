@@ -34,13 +34,6 @@ export def ParseDiceNotation(diceNotation: string): DiceParseResult
   return DiceParseResult.new(numOfDice, sidesOfDice, modifier)
 enddef
 
-export def g:ParseDiceNotation1(diceNotation: string): list<string>
-  var pattern = '\v^(\+?\d+d\d+)+([+-]\d+)?$'
-  var matchList = matchlist(diceNotation, pattern)
-
-  return matchList
-enddef
-
 export def RollDiceX(numOfDice: number, sidesOfDice: number): list<number>
   var rolls: list<number> = []
   for i in range(numOfDice)
